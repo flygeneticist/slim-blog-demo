@@ -9,7 +9,7 @@ $app = new \Slim\App;
 $app->get('/hello/{name}', function (Request $req, Response $res) {
     $name = $req->getAttribute('name');
     $res->getBody()->write("Hello, $name");
-    return $response;
+    return $res;
 });
 
 $app->run();
